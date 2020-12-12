@@ -10,9 +10,9 @@ Application Form
 
 <form method="POST" id="registration" action="file:///C:/Users/nagaamara.ganga/Desktop/try/registration%20success.html">
 <label> Firstname : </label>       
-<input type="text" name="firstname" size="15"/ required> <br> <br>
+<input type="text" pattern="^[A-Za-z]+$" name="firstname" size="15"/ required> <br> <br>
 <label> Lastname : </label>       
-<input type="text" name="lastname" size="15"/ required> <br> <br>
+<input type="text" pattern="^[A-Za-z]+$" name="lastname" size="15"/ required> <br> <br>
 <label> 
 Gender :
  <input type="radio" id="male" name="gender" value="male" required>
@@ -66,7 +66,9 @@ Payment Mode:
   <label for="payment">Phone pe</label><br><br>
 <input type="checkbox" id="declaration" name="declaration" value="declaration" required>
   <label for="declaration"> I here by declare that all the information provided is correct</label><br><br>
-<input type="submit" value="Submit"><br><br>
+
+<button onclick="if(confirm('Verify details before click on OK')){}else{return false}">Submit</button>
+
 </form>
 
 <p><a href="file:///C:/Users/nagaamara.ganga/Desktop/try/index.html">Logout</a></p>
